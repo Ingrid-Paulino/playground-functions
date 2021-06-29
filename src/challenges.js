@@ -7,8 +7,6 @@ function compareTrue(n1, n2) {
     return false
   }
 };
-console.log(compareTrue(true,true));
-
 
 // Desafio 2
 function calcArea(base, height) {
@@ -18,18 +16,35 @@ function calcArea(base, height) {
 
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let stringArray = string.split(' ', );
+  return stringArray;
 }
+console.log(splitSentence("vamo que vamo"));
 
 // Desafio 4
-function concatName() {
+function concatName(vetor) {
   // seu código aqui
-}
+  // for(let index = 0; index < vetor.lenght; index += 1) {
+  // }
+  return vetor[0] + vetor[vetor.lenght -1]
+} 
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+
+
+
+
+
 
 // Desafio 5
-function footballPoints() {
+const vitoria = 3;
+const empate = 1;
+const gol = 0;
+function footballPoints(wins, ties) {
   // seu código aqui
+
+
 }
 
 // Desafio 6
