@@ -25,17 +25,9 @@ console.log(splitSentence("vamo que vamo"));
 
 // Desafio 4
 function concatName(vetor) {
-  // seu código aqui
-  // for(let index = 0; index < vetor.lenght; index += 1) {
-  // }
-  return vetor[0] + vetor[vetor.lenght -1]
+  return `${vetor[vetor.length -1]}, ${vetor[0]}`
 } 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
-
-
-
-
-
+console.log(concatName(['captain', 'my', 'captain']))
 
 // Desafio 5
 const vitoria = 3;
