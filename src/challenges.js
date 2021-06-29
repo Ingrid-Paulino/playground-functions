@@ -1,12 +1,21 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(n1, n2) {
   // seu código aqui
+  if((n1 && n2 )) {
+    return true
+  }else{
+    return false
+  }
 };
+console.log(compareTrue(true,true));
+
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return (base*height)/2
 }
+
 
 // Desafio 3
 function splitSentence() {
