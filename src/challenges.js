@@ -30,14 +30,11 @@ function concatName(vetor) {
 console.log(concatName(['captain', 'my', 'captain']))
 
 // Desafio 5
-const vitoria = 3;
-const empate = 1;
-const gol = 0;
 function footballPoints(wins, ties) {
   // seu código aqui
-
-
+  return (wins * 3 ) + ties ;
 }
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount() {
