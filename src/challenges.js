@@ -97,8 +97,6 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
   return letrasParaNumeros
 }
 
-console.log(encode('hi there!'));
-
 function decode(numeroParaLetra) {
   for(let index = 0; index < numeroParaLetra.length; index +=1) {
     if(numeroParaLetra[index] == '1'){
@@ -115,8 +113,6 @@ function decode(numeroParaLetra) {
 }
   return numeroParaLetra
 }
-
-console.log(decode('h3 th2r2!'));
 
 
 module.exports = {
