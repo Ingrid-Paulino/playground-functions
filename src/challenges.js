@@ -5,7 +5,7 @@ function compareTrue(n1, n2) {
   }else{
     return false
   }
-};
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -21,16 +21,12 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(vetor) {
   return `${vetor[vetor.length -1]}, ${vetor[0]}`
-} 
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3 ) + ties ;
 }
-
-
-//---------------------------------------------------------------------------------------------------------------------
-
 
 // Desafio 6
 function highestCount(numeros) {
@@ -75,48 +71,28 @@ function fizzBuzz(numerosArray) {
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-
-
-
-
-
 // Desafio 9
-function encode(letrasParaNumeros) {
-let letras = 'a e i o u';
-let listaSubstituicao = {
-  a: 1,
-  e: 2,
-  i: 3,
-  o: 4,
-  u: 5
-};
-letrasParaNumeros = letras.replace(/a|e|i|o|u/);
-// let alteracaoLista  = listaSubstituicao[letrasParaNumeros];
-letras = listaSubstituicao[avogais];
-
- return letra
-}
- 
+  function encode(letrasParaNumeros) {
+    let frase = '';
+    frase = letrasParaNumeros.replace(/a/g, '1');
+    frase = letrasParaNumeros.replace(/e/g, '2');
+    frase = letrasParaNumeros.replace(/i/g, '3');
+    frase = letrasParaNumeros.replace(/o/g, '4');
+    frase = letrasParaNumeros.replace(/u/g, '5');
+    return frase
+    }
 console.log(encode('hi there!'));
 
-let resultado = letras.replace('a', '1', 'e', '2')
-
-console.log(resultado);
-
-
-
-
 function decode(numeroParaLetra) {
-  let numeros = '1 2 3 4 5'
-  let res1 = numeros.replace('3', '1')
-  if(numeroParaLetra == res1) {
-    return decode
-  }
-
+  let frase2 = '';
+  frase2 = numeroParaLetra.replace(/1/g, 'a');
+  frase2 = numeroParaLetra.replace(/2/g, 'e');
+  frase2 = numeroParaLetra.replace(/3/g, 'i');
+  frase2 = numeroParaLetra.replace(/4/g, 'o');
+  frase2 = numeroParaLetra.replace(/3/g, 'u');
+  return frase2
 }
-console.log(decode('hi there'));
-
-
+console.log(decode('h3 th2r2!'));
 
 
 module.exports = {
@@ -131,28 +107,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-
-
-function encode(letrasParaNumeros){
-  let array = []
-  for (let letra of letrasParaNumeros) {
-    array.push(letra)
-  }
-  for(let index = 0; index == array.length; index +=1) {
-    switch(array) {
-      case letra[index] == 'a':
-        letra[index] = '1';
-        break
-    }
-  }
-}
-
-console.log(encode('a'));
-
-
-
-
-
-
-
