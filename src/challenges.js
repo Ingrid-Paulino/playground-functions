@@ -46,34 +46,36 @@ console.log(highestCount([10, 1, 10, 3, 5, 3, 7]));
 
 //Desafio 7
 function catAndMouse(mouse, cat1, cat2 ) {
-  let calculoCat1 = mouse - cat1;
-  let calculoCat2 = mouse - cat2;
-  if(calculoCat1 > calculoCat2) {
-    return 'cat1';
-  }else if(calculoCat1 < calculoCat2){
-    return 'cat2';
-  } else {
-    return "Os gatos trombam e o rato foge";
-  }
+  let resposta;
+  let calculoCat1 = Math.abs(mouse - cat1);
+  let calculoCat2 = Math.abs(mouse - cat2);
   
- 
+  if(calculoCat1 === calculoCat2) {
+    resposta = 'os gatos trombam e o rato foge';
+  }else if(calculoCat1 < calculoCat2){
+    resposta = 'cat1';
+  }else {
+    resposta = 'cat2';
+  }
+  return resposta;
 }
-  console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(numerosArray) {
-  
+  let array = [];
   for(let index = 0; index < numerosArray.length; index += 1) {
-    let res = '';
     if(numerosArray[index]%3 == 0) {
-      return "fizz";
-      res.push([index])
+      array.push([index])
+      return array += "fizz";
     }else if(numerosArray[index]%5 == 0 ){
-      return "buzz";
+      array.push([index])
+      return array += "buzz";
     }else if(numerosArray[index]%3 == 0 && numerosArray[index]%5 == 0 ) {
-      return "fizzBuzz";
+      array.push([index])
+      return array += "fizzBuzz";
     }else {
-      return "bug!";
+      array.push([index])
+      return array += "bug!";
     };  
   }
 }
@@ -127,3 +129,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+
