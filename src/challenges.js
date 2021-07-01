@@ -27,21 +27,23 @@ function concatName(vetor) {
 function footballPoints(wins, ties) {
   return (wins * 3 ) + ties ;
 }
-
-// Desafio 6
+//Desafio 6
 function highestCount(numeros) {
-  for(let index = 0; index < numeros.length; index += 1) {  let nRepete = 1;
-    let qtdRepete = 0;
-    for(let indexIgual = 0; indexIgual < numeros.length; indexIgual += 1) {
-      if(numeros[index] == numeros[indexIgual]) {
-      nRepete += 1
-      qtdRepete = numeros[index];
-      }
+  let resposta = 0;
+  let maiorNumero = numeros[0];
+  for(let valor of numeros){
+    if(valor > maiorNumero) {
+      maiorNumero = valor;
+    };
+  };
+  for(let valor of numeros) {
+    if(valor === maiorNumero) {
+      resposta += 1;
     }
-    return qtdRepete
   }
-}
-console.log(highestCount([10, 1, 10, 3, 5, 3, 7]));
+  return resposta
+};
+
 
 
 //Desafio 7
@@ -63,23 +65,19 @@ function catAndMouse(mouse, cat1, cat2 ) {
 // Desafio 8
 function fizzBuzz(numerosArray) {
   let array = [];
-  for(let index = 0; index < numerosArray.length; index += 1) {
-    if(numerosArray[index]%3 == 0) {
-      array.push([index])
-      return array += "fizz";
-    }else if(numerosArray[index]%5 == 0 ){
-      array.push([index])
-      return array += "buzz";
-    }else if(numerosArray[index]%3 == 0 && numerosArray[index]%5 == 0 ) {
-      array.push([index])
-      return array += "fizzBuzz";
+  for(let numero of numerosArray) {
+    if(numero % 3 === 0 && numero%5 === 0 ) {
+      array.push("fizzBuzz");
+    }else if(numero % 5 === 0 ){
+      array.push("buzz");
+    }else if(numero % 3 === 0) {
+      array.push("fizz");
     }else {
-      array.push([index])
-      return array += "bug!";
+      array.push("bug!");
     };  
-  }
+  };
+  return array;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
   function encode(letrasParaNumeros) {
