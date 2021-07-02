@@ -18,10 +18,50 @@ function techList(tecnologias, name) {
   }
 }
 
+
+
+
+
+
+
+
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numeros) {
+  let array = [];
+  
+  array.push('(')
+  for(let index = 0; index < numeros.length - 9; index += 1) {
+    array.push(numeros[index])
+  }
+  array.push(')')
+  array.push('')
+  for(let index2 = 2; index2 <numeros.length - 4; index2 += 1 ){
+    array.push(numeros[index2])
+  }
+  array.push('-')
+  for(let index3 = 7; index3 <numeros.length; index3 += 1 ){
+    array.push(numeros[index3])
+  }
+  
+  return array
+
 }
+console.log(generatePhoneNumber([3,1,9,9,2,6,4,4,5,1,5]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 12
 function triangleCheck() {
