@@ -1,15 +1,15 @@
 // Desafio 1
 function compareTrue(n1, n2) {
-  if((n1 && n2 )) {
-    return true
-  }else{
-    return false
-  }
+  if((n1 && n2)){
+    return true;
+  }else {
+    return false;
+  };
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -20,13 +20,13 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(vetor) {
-  return `${vetor[vetor.length -1]}, ${vetor[0]}`
-}
+  return `${vetor[vetor.length - 1]}, ${vetor[0]}`;
+};
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3 ) + ties ;
-}
+};
 //Desafio 6
 function highestCount(numeros) {
   let resposta = 0;
@@ -39,9 +39,9 @@ function highestCount(numeros) {
   for(let valor of numeros) {
     if(valor === maiorNumero) {
       resposta += 1;
-    }
-  }
-  return resposta
+    };
+  };
+  return resposta;
 };
 
 
@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2 ) {
     resposta = 'cat2';
   }
   return resposta;
-}
+};
 
 // Desafio 8
 function fizzBuzz(numerosArray) {
@@ -82,20 +82,20 @@ function fizzBuzz(numerosArray) {
 // Desafio 9
   function encode(letrasParaNumeros) {
     for(let index = 0; index < letrasParaNumeros.length; index +=1) {
-      if(letrasParaNumeros[index] == 'a'){
-        letrasParaNumeros = letrasParaNumeros.replace('a', '1')
-      }else if(letrasParaNumeros[index] == 'e'){
-        letrasParaNumeros = letrasParaNumeros.replace('e', '2')
-      }else if(letrasParaNumeros[index] == 'i'){
-        letrasParaNumeros = letrasParaNumeros.replace('i', '3')
-      }else if(letrasParaNumeros[index] == 'o'){
-        letrasParaNumeros = letrasParaNumeros.replace('o', '4')
-      }else if(letrasParaNumeros[index] == 'u'){
-        letrasParaNumeros = letrasParaNumeros.replace('u', '5')
-      }
-  }
-  return letrasParaNumeros
-}
+      if(letrasParaNumeros[index] === 'a'){
+        letrasParaNumeros = letrasParaNumeros.replace('a', '1');
+      }else if(letrasParaNumeros[index] === 'e'){
+        letrasParaNumeros = letrasParaNumeros.replace('e', '2');
+      }else if(letrasParaNumeros[index] === 'i'){
+        letrasParaNumeros = letrasParaNumeros.replace('i', '3');
+      }else if(letrasParaNumeros[index] === 'o'){
+        letrasParaNumeros = letrasParaNumeros.replace('o', '4');
+      }else if(letrasParaNumeros[index] === 'u'){
+        letrasParaNumeros = letrasParaNumeros.replace('u', '5');
+      };
+  };
+  return letrasParaNumeros;
+};
 
 function decode(numeroParaLetra) {
   for(let index = 0; index < numeroParaLetra.length; index +=1) {
