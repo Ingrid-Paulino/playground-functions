@@ -19,45 +19,27 @@ function techList(tecnologias, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numeros) {
-  let array = [];
-  
-  array.push('(')
-  for(let index = 0; index < numeros.length - 9; index += 1) {
-    array.push(numeros[index])
-  }
-  array.push(')')
-  array.push('')
-  for(let index2 = 2; index2 <numeros.length - 4; index2 += 1 ){
-    array.push(numeros[index2])
-  }
-  array.push('-')
-  for(let index3 = 7; index3 <numeros.length; index3 += 1 ){
-    array.push(numeros[index3])
-  }
-  array = array.join('')
-  // for(let i = 3; i < array.length - 10; i +=1) {
-  //   array[i].join('');
-  // }
+/**
+ * Consultei o repositório do Lucas Oliveira para resolver essa parte.
+ * Link https://github.com/tryber/sd-014-a-project-playground-functions/pull/112
+ */
+function generatePhoneNumber(array) {
+  let qtd = array.reduce((acumulador, elemento) => {
+    acumulador[elemento] = (elemento in acumulador ? acumulador[elemento] + 1 : 1);
+    return acumulador;
+  }, {});
 
-  if(numeros.length !== 11) {
-    array = "Array com tamanho incorreto."
-  }else if(numeros < 0 || numeros > 9) {
-    array = "não é possível gerar um número de telefone com esses valores"
-  }
+  if (array.length !== 11) return 'Array com tamanho incorreto.';
+  if (array.some((e) => e < 0 || e > 9 || qtd[e] >= 3)) return 'não é possível gerar um número de telefone com esses valores';
 
+  const op = array.splice(0, 2).join('');
+  const part1 = array.splice(0, 5).join('');
+  const tel = `(${op}) ${part1}-${array.join('')}`;
 
-  return array
-
+  return tel;
 }
+
 console.log(generatePhoneNumber([3,1,9,9,2,6,4,4,5,1,5]))
-
-
-
-
-
-
-
 
 
 
@@ -96,7 +78,6 @@ function hydrate(string) {
   }else {
     return `${soma} copos de água`;
   };
-
 }
 
 module.exports = {
