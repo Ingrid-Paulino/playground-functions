@@ -82,24 +82,21 @@ console.log(triangleCheck(30, 10, 10))
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  var pegaN = /\d+/g;
+  var numero =string.match(pegaN)
+  var soma = 0;
+  for(let index = 0; index < numero.length; index += 1) {
+    soma = soma + Number(numero[index]) 
+  };
+  
+  if(soma < 2) {
+    return `${soma} copo de água`;
+  }else {
+    return `${soma} copos de água`;
+  };
+
 }
 
 module.exports = {
