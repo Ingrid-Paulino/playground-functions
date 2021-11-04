@@ -18,6 +18,8 @@ function splitSentence(string) {
   return stringArray;
 }
 
+console.log(splitSentence('oi amigos do coração'));
+
 // Desafio 4
 function concatName(vetor) {
   return `${vetor[vetor.length - 1]}, ${vetor[0]}`;

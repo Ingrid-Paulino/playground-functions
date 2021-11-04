@@ -4,7 +4,7 @@ function techList(tecnologias, name) {
   let arrayOrganiza = tecnologias.sort();
   let cont = 0;
   for(let index = 0; index < tecnologias.length; index += 1) {
-     let techtechObj = {
+    let techtechObj = {
     tech: arrayOrganiza[index],
     name: name
   }
