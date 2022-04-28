@@ -1,4 +1,4 @@
-// Desafio 10
+// Desafio 10 - Crie uma função de Lista de tecnologias
 function techList(tecnologias, name) {
   let array = [];
   let arrayOrganiza = tecnologias.sort();
@@ -18,7 +18,7 @@ function techList(tecnologias, name) {
   }
 }
 
-// Desafio 11
+// Desafio 11 - Crie uma função de Número de telefone
 /**
  * Consultei o repositório do Lucas Oliveira para resolver essa parte.
  * Link https://github.com/tryber/sd-014-a-project-playground-functions/pull/112
@@ -44,7 +44,7 @@ console.log(generatePhoneNumber([3,1,9,9,2,6,4,4,5,1,5]))
 
 
 
-// Desafio 12
+// Desafio 12 - Crie uma função de Condição de existência de um triângulo
 function triangleCheck(lineA, lineB, lineC) {
   let soma = lineB + lineC;
   let subtracao = lineB - lineC;
@@ -64,9 +64,9 @@ console.log(triangleCheck(30, 10, 10))
 
 
 
-// Desafio 13
+// Desafio 13 - Crie uma função de Boas Vindas ao Bar da Trybe!
 function hydrate(string) {
-  var pegaN = /\d+/g;
+  var pegaN = /\d+/g; //regex -> capitura o  numero na string
   var numero =string.match(pegaN)
   var soma = 0;
   for(let index = 0; index < numero.length; index += 1) {
